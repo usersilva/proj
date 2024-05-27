@@ -2,23 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>задание 1</title>
+    <title>Creating a chart</title>
+    <link rel="stylesheet" href="1.css">
 </head>
 <body>
-<h1>Creating a chart</h1>
-<p>To create a chart, we need to instantiate the Chart class.
+<h2>Creating a chart</h2>
+<p>To create a chart, we need to instantiate the <code>Chart</code> class.
     To do this, we need to pass in the 2d context of where we want to draw the chart.
 Here's an example.</p>
 
-<p> &lt canvas id="MyChart" width="400" height="400" &gt &lt /canvas &gt</p>
-<p> //Get the context of the canvas element we want to select<br>
-var ctx = document.getElementById("myChart").getContext("2d");<br>
-var myNewChart = new Chart(ctx).PolarArea(data);</p>
+<pre><code>&ltcanvas id="MyChart" width="400" height="400"&gt&lt/canvas&gt</code></pre>
+
+<div class="comments"><i>//Get the context of the canvas element we want to select</i></div>
+<pre>var ctx = document.getElementById("myChart").getContext("2d");<br>
+var myNewChart = new Chart(ctx).PolarArea(data);</pre>
+
+
 <p>We can also get the context of our canvas with jQuery. To do this, we need to
-get the DOM node out og the jQuery collection, and call the getContext("2d") method on that.</p>
-<p>var ctx = $("#myChart").get(0).getContext("2d");<br>
-//This will get the first returned node in the jQuery collection<br>
-var myNewChart = new Chart(ctx);</p>
+get the DOM node out og the jQuery collection, and call the <code>getContext("2d")</code> method on that.</p>
+
+<div class="scrollable-text">
+    <div class="comments"><i>//Get context with jQuery - using jQuery's .get() method.</i></div>
+    <pre>var ctx = $("#myChart").get(0).getContext("2d");</pre>
+    <div class="comments"><i>//This will get the first returned node in the jQuery collection</i></div>
+<pre>var myNewChart = new Chart(ctx);</pre>
+</div>
+
 <p>After we've instantiated the Chart class on the canvas we want to draw on.
 <br>Chart.js will handle the scaling for retina displays.</p>
 </body>

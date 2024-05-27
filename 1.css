@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    color: darkgray;
+    background-color: white;
+    width: 550px;
+}
+
+h2 {
+    color: #000000;
+}
+
+p {
+    color: #2C2C2C;
+}
+
+pre{
+ background: #F9F9F9;
+
+    border-radius: 8px;
+}
+
+code{
+    background: #F9F9F9;
+
+    border-radius: 8px;
+}
+
+.comments{
+    color: gray;
+    font-family: "Segoe UI";
+}
+
+.scrollable-text{
+    width: 350px;
+    white-space: nowrap;
+    overflow-x: auto;
+    background: #F9F9F9;
+    line-height: 100%;
+}
